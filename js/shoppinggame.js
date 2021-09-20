@@ -1,9 +1,9 @@
 let gameComplete = false;
 // Define the three constants here
 
-const name;
-const score; 
-const items;
+const name = 'unkown';
+const score = 0; 
+const items = 0;
 
 // Define the player object here
 
@@ -32,7 +32,7 @@ let player = {
 
 function Product(id, name, price, expiryDate) {
     player.call(this, id, name, price, expiryDate)
-    
+
 }
 
 // Complete the dateDiff function
