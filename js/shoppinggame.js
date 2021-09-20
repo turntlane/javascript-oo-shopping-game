@@ -1,7 +1,7 @@
 let gameComplete = false;
 // Define the three constants here
 
-const name = 'unkown';
+const name = 'unknown';
 const score = 0; 
 const items = 0;
 
@@ -46,6 +46,11 @@ const dateDiff = (date1, date2) => {
 };
 
 // Here, use Object.defineProperty to create property - daysToExpire
+Object.defineProperty(Product, 'daysToExpire',  {
+    get: function() {
+        
+    }
+})
 
 // Add method getDetails to Product here
 
