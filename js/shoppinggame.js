@@ -8,20 +8,20 @@ const items = 0;
 // Define the player object here
 
 let player = {
-    name: 'unknown',
-    score: 0,
-    items: 0,
+    name,
+    score,
+    items,
 
     getCurrentScore(){
-        return score;
+        return this.score;
     },
 
     addPoints(points) {
-        score += points;
+        this.score += points;
     },
 
     deductPoints(points) {
-        score -= points;
+        this.score -= points;
     }
 }
 
@@ -31,12 +31,19 @@ let player = {
 // Define the Product class - write the Constructor function for Product class here
 
 function Product(id, name, price, expiryDate) {
-    player.call(this, id, name, price, expiryDate)
+    this.id = id;
+    this.name = name;
+    this.price = price;
+    this.expiryDate = expiryDate;
 
 }
 
 // Complete the dateDiff function
-const dateDiff = (date1, date2) => {};
+const dateDiff = (date1, date2) => {
+    let diffTime = Math.abs(date2 - date1)
+    let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+    return diffDays;
+};
 
 // Here, use Object.defineProperty to create property - daysToExpire
 
