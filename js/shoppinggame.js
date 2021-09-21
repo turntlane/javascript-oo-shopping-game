@@ -251,7 +251,7 @@ const getProduct = (prodList, pId) => {
 
 // Complete this function
 const calculateBill = (prod, tBill) => {
-    return tBill + Product(prod);
+    return tBill + prod.price;
 };
 
 const findPointsToBill = (roundedTotal) => {
@@ -275,7 +275,7 @@ const findPointsToBill = (roundedTotal) => {
 
 // Complete this function
 const findPointsForExpDate = (prod) => {
-    if(daysToExpire(prod) < 30) {
+    if(prod.expiryDate < 30) {
         return 10;
     }else {
         return 0;
