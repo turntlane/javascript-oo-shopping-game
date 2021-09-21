@@ -229,13 +229,13 @@ function loadMasterData() {
 
 // Complete this function
 const findProductById = (id) => {
-    return (function(product) {
+    return function(product) {
         if (id === product.id) {
             return true;
         }else {
             return false;
         }
-    })()
+    }
 };
 
 // Complete this function
