@@ -340,8 +340,8 @@ function init(data) {
         let productDetails = Product.getDetails(); // Assign the value of productDetails here
 
         rl.question(`You can buy - ${productDetails}.\n Do you want to buy this item <Y/N>? `.yellow, function (option) {
-            const regexYes = new RegExp('Y', 'i'); // Use the RegExp built-in object type here as appropriate
-            const regexNo = new RegExp('N', 'i'); // Use the RegExp built-in object type here as appropriate
+            const regexYes = new RegExp('y', 'i'); // Use the RegExp built-in object type here as appropriate
+            const regexNo = new RegExp('n', 'i'); // Use the RegExp built-in object type here as appropriate
             if (regexYes.test(option)) {
                 totalBill = calculateBill(product, totalBill);
                 calculatePoints(product, totalBill);
