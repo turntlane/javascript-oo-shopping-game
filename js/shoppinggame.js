@@ -297,6 +297,8 @@ const calculatePoints = (prod, tBill) => {
     }
 };
 
+
+
 // Complete this function
 function init(data) {
     if (Object.is(data, undefined) == false && gameComplete == true) {
@@ -335,11 +337,11 @@ function init(data) {
         let totalBill = tBill;
         const prId = generateProductId();
         let product = (Object.is(lastProd, undefined)) ? lastProd : getProduct(prodList, prId); // Assign the value of product here
-        let productDetails = null; // Assign the value of productDetails here
+        let productDetails = Product.getDetails(); // Assign the value of productDetails here
 
         rl.question(`You can buy - ${productDetails}.\n Do you want to buy this item <Y/N>? `.yellow, function (option) {
-            const regexYes = null; // Use the RegExp built-in object type here as appropriate
-            const regexNo = null; // Use the RegExp built-in object type here as appropriate
+            const regexYes = new RegExp('Y', 'i'); // Use the RegExp built-in object type here as appropriate
+            const regexNo = new RegExp('N', 'i'); // Use the RegExp built-in object type here as appropriate
             if (regexYes.test(option)) {
                 totalBill = calculateBill(product, totalBill);
                 calculatePoints(product, totalBill);
